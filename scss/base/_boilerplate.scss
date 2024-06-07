@@ -1,0 +1,19 @@
+@use "../util/" as u;
+
+body {
+  background-color: u.$background-color;
+  background-image: url(../images/bg-intro-mobile.png);
+}
+
+.intro {
+  @include u.flexDisplay(20px);
+  //   gap: 20px;
+}
+
+.sub {
+  @include u.flexDisplay(25px);
+
+  &__form {
+    @include u.flexDisplay(15px);
+  }
+}

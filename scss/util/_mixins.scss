@@ -1,0 +1,6 @@
+@mixin flexDisplay($gap) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $gap;
+}

@@ -1,0 +1,29 @@
+@use "../util/" as u;
+
+.form {
+  background-color: u.$primary-font;
+  border-radius: 8px;
+  box-shadow: 0 7px u.$button-shadow;
+  padding: 20px 0;
+  width: 100%;
+
+  &__input {
+    border: 0.75px solid u.$form-footer-font;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px;
+    width: 90%;
+  }
+
+  &__footer {
+    color: u.$form-footer-font;
+    font-size: 11px;
+    width: 80%;
+
+    span {
+      color: u.$background-color;
+      font-weight: 600;
+    }
+  }
+}
