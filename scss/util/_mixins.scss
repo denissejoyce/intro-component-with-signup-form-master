@@ -1,6 +1,34 @@
 @mixin flexDisplay($gap) {
   display: flex;
   align-items: center;
+  //delete if ever
+  justify-content: center;
   flex-direction: column;
   gap: $gap;
+}
+
+@mixin animateClick($height, $color) {
+  animation: click;
+  animation-duration: 1.5s;
+
+  @keyframes click {
+    0% {
+    }
+    25% {
+      transform: translateY(calc($height/3));
+      box-shadow: none;
+    }
+    50% {
+      transform: translateY(calc($height/3));
+      box-shadow: none;
+    }
+    75% {
+      transform: translateY(calc($height/3));
+      box-shadow: none;
+    }
+    100% {
+      transform: translateY(-$height);
+      box-shadow: 0 $height $color;
+    }
+  }
 }

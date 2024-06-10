@@ -7,13 +7,28 @@
   align-items: center;
   margin: 60px 20px 30px 20px;
 
+  @include u.breakpoint(medium) {
+    margin: 0 8%;
+  }
+
+  @include u.breakpoint(large) {
+    // margin: 0 150px;
+    margin: 0 10%;
+  }
+
   &__content {
     display: grid;
     gap: 50px;
     grid-template-columns: 1fr;
 
     @include u.breakpoint(medium) {
+      gap: 40px;
       grid-template-columns: 1fr 1fr;
+    }
+
+    @include u.breakpoint(large) {
+      gap: 40px;
+      grid-template-columns: 1.5fr 1fr;
     }
   }
 }

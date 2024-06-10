@@ -6,14 +6,52 @@
   box-shadow: 0 7px u.$button-shadow;
   padding: 20px 0;
   width: 100%;
+  font-size: 14px;
 
   &__input {
-    border: 0.75px solid u.$form-footer-font;
+    border: 1.5px solid u.$form-footer-font;
     border-radius: 6px;
-    font-size: 14px;
+    color: u.$form-font;
+    // font-size: 14px;
     font-weight: 700;
     padding: 15px;
     width: 90%;
+
+    @include u.breakpoint(large) {
+      padding: 20px 20px 20px 25px;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: u.$form-header;
+      transition: border-color 0.25s ease;
+
+      &::placeholder {
+        opacity: 50%;
+      }
+    }
+  }
+
+  &__error {
+    border-color: u.$background-color;
+    background-image: url(../../images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    color: u.$background-color;
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  &__alert {
+    color: u.$background-color;
+    font-size: 80%;
+    font-weight: 600;
+    font-style: italic;
+    width: 90%;
+    text-align: end;
+    margin-top: -10px;
   }
 
   &__footer {
@@ -24,6 +62,35 @@
     span {
       color: u.$background-color;
       font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
+  }
+}
+
+.focus {
+  animation: wiggle;
+  animation-duration: 0.65s;
+}
+
+.invisible {
+  display: none;
+}
+
+@keyframes wiggle {
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(2px);
   }
 }

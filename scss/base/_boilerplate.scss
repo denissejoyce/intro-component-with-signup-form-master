@@ -1,5 +1,9 @@
 @use "../util/" as u;
 
+*:not(.form__error) {
+  transition: 1s ease;
+}
+
 body {
   background-color: u.$background-color;
   background-image: url(../images/bg-intro-mobile.png);
@@ -7,6 +11,7 @@ body {
 
 .intro {
   @include u.flexDisplay(20px);
+  min-height: 100%;
   //   gap: 20px;
 }
 
