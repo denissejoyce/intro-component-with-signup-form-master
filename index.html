@@ -72,9 +72,7 @@
               type="text"
               onfocus="getCurrent()"
             />
-            <div class="form__alert invisible">
-              Looks like this is not a valid email
-            </div>
+            <div class="form__alert invisible">Invalid email</div>
 
             <label for="userPword" hidden>Password</label>
             <input
@@ -86,7 +84,7 @@
             />
             <div class="form__alert invisible">Password cannot be empty</div>
 
-            <button class="form__submit btn btn--submit">
+            <button class="form__submit btn btn--submit" onclick="checkInput()">
               Claim your free trial
             </button>
             <p class="form__footer">

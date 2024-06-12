@@ -45,13 +45,19 @@
   }
 
   &__alert {
-    color: u.$background-color;
     font-size: 80%;
     font-weight: 600;
     font-style: italic;
     width: 90%;
+    color: u.$background-color;
     text-align: end;
+
     margin-top: -10px;
+
+    &__success {
+      color: u.$claim-button;
+      text-align: start;
+    }
   }
 
   &__footer {

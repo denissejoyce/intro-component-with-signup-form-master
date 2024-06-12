@@ -39,5 +39,11 @@
     &:active {
       @include u.animateClick(5px, u.$button-shadow);
     }
+    &--success {
+      box-shadow: none;
+      opacity: 70%;
+      pointer-events: none;
+      transform: translateY(5px);
+    }
   }
 }
