@@ -48,7 +48,6 @@ const checkInput = function () {
       alerts[i].classList.add('invisible');
       ctr -= 1;
     }
-    console.log(`ctr: ${ctr}`);
   }
   if (ctr <= 0) {
     document.querySelector('.btn--submit').textContent = `Free trial claimed!`;
