@@ -10,15 +10,13 @@ body {
 }
 
 .intro {
-  @include u.flexDisplay(20px);
+  @include u.flexDisplay(1.25rem);
   min-height: 100%;
-  //   gap: 20px;
 }
 
 .sub {
-  @include u.flexDisplay(25px);
-
+  @include u.flexDisplay(1.563rem);
   &__form {
-    @include u.flexDisplay(15px);
+    @include u.flexDisplay(0.938rem);
   }
 }

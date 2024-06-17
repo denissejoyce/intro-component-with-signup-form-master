@@ -18,22 +18,14 @@ body {
 
   &__title {
     font-size: clamp(1.75rem, 2.8vw, 4.063rem);
-    // font-size: 28px;
-    // width: 300px;
     width: 90%;
 
     @include u.breakpoint(medium) {
       width: 75%;
     }
-
-    // @include u.breakpoint(large) {
-    //   width: 62%;
-    // }
   }
   &__p {
     font-size: clamp(1rem, 1.15vw, 1.25rem);
-    // font-size: 16px;
-    // width: 325px;
     width: 95%;
     opacity: 85%;
 

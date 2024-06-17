@@ -5,7 +5,7 @@ const btnSubmit = document.querySelector('.btn--submit');
 const formQ1 = document.querySelector('.form__input');
 const alerts = document.querySelectorAll('.form__alert');
 let active,
-  ctr = 0,
+  ctr,
   isValid = true;
 
 const getCurrent = function () {
@@ -23,7 +23,7 @@ const checkInput = function () {
   };
 
   const info = Object.keys(userInfo);
-
+  ctr = 0;
   for (const info in userInfo) {
     if (userInfo[info] == '') {
       document.getElementById(info).classList.add('form__error');
@@ -46,9 +46,9 @@ const checkInput = function () {
       ctr += 1;
     } else {
       alerts[i].classList.add('invisible');
-      ctr -= 1;
     }
   }
+  console.log(`ctr: ${ctr}`);
   if (ctr <= 0) {
     document.querySelector('.btn--submit').textContent = `Free trial claimed!`;
     document
